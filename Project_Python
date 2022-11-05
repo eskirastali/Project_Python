@@ -1,0 +1,12 @@
+l=[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+new_list=[]
+
+def flat(x):
+    for i in x:
+        if isinstance(i,list):
+            flat(i)
+        else:
+            new_list.append(i)
+       
+flat(l)
+print(new_list)
